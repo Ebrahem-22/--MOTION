@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التسجيل - كورس السبورة البيضاء</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="register-style.css">
+</head>
+<body class="dark-theme">
+    <div class="register-container">
+        <div class="register-card">
+            <div class="card-header">
+                <h1>التسجيل في الكورس</h1>
+                <p>املأ البيانات التالية للحجز</p>
+            </div>
+            
+            <form class="register-form" id="registerForm">
+                <div class="form-group">
+                    <div class="input-container">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="name" name="name" placeholder=" " required>
+                        <label for="name">الاسم بالكامل</label>
+                        <span class="focus-border"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-container">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" name="email" placeholder=" " required>
+                        <label for="email">البريد الإلكتروني</label>
+                        <span class="focus-border"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-container">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" id="phone" name="phone" placeholder=" " required>
+                        <label for="phone">رقم الهاتف</label>
+                        <span class="focus-border"></span>
+                    </div>
+                </div>
+
+                <div class="pricing-box">
+                    <div class="pricing-header">
+                        <i class="fas fa-tag"></i>
+                        <span>تفاصيل العرض</span>
+                    </div>
+                    
+                    <div class="pricing-content">
+                        <div class="price-item">
+                            <div class="original-price">
+                                <span class="label">السعر الأصلي</span>
+                                <span class="amount">900 ج</span>
+                            </div>
+                            <div class="discount-badge">
+                                <i class="fas fa-percentage"></i>
+                                خصم 44%
+                            </div>
+                        </div>
+                        
+                        <div class="savings">
+                            <div class="savings-icon">
+                                <i class="fas fa-piggy-bank"></i>
+                            </div>
+                            <span>توفير 400 جنيه</span>
+                        </div>
+                        
+                        <div class="final-price-box">
+                            <div class="final-price-label">السعر بعد الخصم</div>
+                            <div class="final-price-amount">
+                                <span class="amount">500</span>
+                                <span class="currency">جنيه</span>
+                            </div>
+                            <div class="price-note">
+                                <i class="fas fa-clock"></i>
+                                عرض محدود
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="submit-button-container">
+                    <button type="submit" class="submit-btn">
+                        تأكيد التسجيل
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                </div>
+            </form>
+
+            <div class="back-link">
+                <a href="index.html">
+                    <i class="fas fa-arrow-right"></i>
+                    العودة للصفحة الرئيسية
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

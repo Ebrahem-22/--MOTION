@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كورس السبورة البيضاء الاحترافي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@clerk/clerk-js@latest/dist/clerk.browser.js"></script>
+    <script>
+        // التحقق من تحميل Clerk
+        window.addEventListener('load', async function() {
+            await window.Clerk.load();
+        });
+    </script>
+</head>
+<body class="dark-theme">
+    <div id="clerk-auth"></div>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <div class="nav-left">
+                <a href="register.html" class="nav-cta">
+                    سجل الآن
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="main-title">تعلم فن السبورة البيضاء</h1>
+                <p class="main-subtitle">اتقن مهارات الشرح والتعليم البصري باحترافية</p>
+                
+                <div class="pricing-section">
+                    <div class="limited-offer">
+                        <i class="fas fa-bolt"></i>
+                        عرض محدود لفترة
+                    </div>
+                    <div class="price-content">
+                        <div class="original-price-tag">
+                            <span class="amount">900</span>
+                            <span class="currency">جنيه</span>
+                        </div>
+                        <div class="discount-info">
+                            <div class="save-badge">
+                                <i class="fas fa-gift"></i>
+                                وفر 400 جنيه
+                            </div>
+                            <div class="discount-badge">
+                                <i class="fas fa-percent"></i>
+                                خصم 44%
+                            </div>
+                        </div>
+                        <div class="final-price">
+                            <span class="amount">500</span>
+                            <span class="currency">جنيه</span>
+                        </div>
+                    </div>
+                    <button onclick="window.location.href='register.html'" id="registerBtn" class="cta-button">
+                        احجز مكانك الآن
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- قسم ماذا ستتعلم -->
+    <section class="skills">
+        <div class="container">
+            <h2 class="section-title">ماذا ستتعلم في الكورس؟</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-pencil-alt"></i>
+                    <h3>أساسيات الرسم</h3>
+                    <p>تعلم أساسيات الرسم والتخطيط على السبورة البيضاء بأسلوب احترافي</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>تقنيات الشرح</h3>
+                    <p>اكتساب مهارات الشرح البصري وتبسيط المعلومات المعقدة</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>الألوان والتنسيق</h3>
+                    <p>تعلم استخدام الألوان وتنسيق السبورة بشكل جذاب ومنظم</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>التفكير البصري</h3>
+                    <p>تطوير مهارات التفكير البصري وتحويل الأفكار إلى رسومات</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم آراء المشتركين -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">آراء المشتركين</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="أحمد محمد">
+                    <p>"الكورس سير طريقة شرحي بالكامل، أصبحت قادراً على توصيل المعلومات بشكل أفضل"</p>
+                    <h4>أحمد محمد</h4>
+                    <span class="job-title">مدرس رياضيات</span>
+                </div>
+                <div class="testimonial-card">
+                    <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="سارة أحمد">
+                    <p>"تعلمت كيفية تنظيم أفكاري وعرضها بشكل مرئي جذاب على السبورة"</p>
+                    <h4>سارة أحمد</h4>
+                    <span class="job-title">معلمة علوم</span>
+                </div>
+                <div class="testimonial-card">
+                    <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="محمد علي">
+                    <p>"أصبحت محاضراتي أكثر تفاعلية وجاذبية بفضل تقنيات السبورة البيضاء"</p>
+                    <h4>محمد علي</h4>
+                    <span class="job-title">محاضر جامعي</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- النافذة المنبثقة -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-header">
+                <i class="fas fa-paper-plane modal-icon"></i>
+                <h2>جاري تحويلك لصفحة التسجيل</h2>
+                <p>انتظر قليلاً...</p>
+            </div>
+            <div class="countdown-wrapper">
+                <div class="countdown-circle">
+                    <span id="countdown">5</span>
+                </div>
+                <div class="loading-bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- إضافة modal خاص بـ Clerk -->
+    <div id="clerk-modal" class="clerk-modal">
+        <div class="clerk-modal-content">
+            <div id="clerk-auth-container"></div>
+        </div>
+    </div>
+
+    <!-- إضافة زر Chatbot -->
+    <div class="chat-widget">
+        <button id="chatToggle" class="chat-toggle">
+            <i class="fas fa-comments"></i>
+        </button>
+        
+        <div id="chatbox" class="chatbox hidden">
+            <div class="chat-header">
+                <h3>المساعد الذكي</h3>
+                <button id="closeChat" class="close-chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div id="chatMessages" class="chat-messages">
+                <div class="message bot">
+                    مرحباً! كيف يمكنني مساعدتك؟
+                </div>
+            </div>
+            
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="اكتب سؤالك هنا...">
+                <button id="sendMessage">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html> 

@@ -1,0 +1,483 @@
+:root {
+    --primary-color: #2563eb;
+    --dark-bg: #121212;
+    --dark-card: #1a1a1a;
+    --text-color: #ffffff;
+}
+
+body.dark-theme {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    margin: 40px auto;
+}
+
+.register-card {
+    background: var(--dark-card);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    width: 100%;
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.card-header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.card-header p {
+    color: #888;
+    font-size: 16px;
+}
+
+.register-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.input-container {
+    position: relative;
+    margin-top: 25px;
+    width: 100%;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 16px 50px 16px 20px;
+    font-size: 15px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    transition: all 0.3s ease;
+    height: 55px;
+    box-sizing: border-box;
+}
+
+.input-container label {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 14px;
+    font-weight: 500;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-container i {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #2563eb;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input-container input:focus,
+.input-container input:valid {
+    background: rgba(37, 99, 235, 0.1);
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.1);
+}
+
+.input-container input:focus ~ label,
+.input-container input:valid ~ label,
+.input-container input:not(:placeholder-shown) ~ label {
+    top: -20px;
+    right: 5px;
+    font-size: 13px;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.input-container input:focus ~ i,
+.input-container input:valid ~ i,
+.input-container input:not(:placeholder-shown) ~ i {
+    color: #2563eb;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #2563eb, #1d4ed8);
+    transition: width 0.3s ease;
+}
+
+.input-container input:focus ~ .focus-border,
+.input-container input:valid ~ .focus-border {
+    width: 100%;
+}
+
+.input-container:hover input {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+@keyframes inputFocus {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.input-container input:focus {
+    background: linear-gradient(
+        90deg,
+        rgba(37, 99, 235, 0.1) 0%,
+        rgba(29, 78, 216, 0.1) 100%
+    );
+    background-size: 200% 100%;
+    animation: inputFocus 3s infinite;
+}
+
+@media (max-width: 768px) {
+    .register-card {
+        padding: 30px 20px;
+    }
+
+    .register-form {
+        max-width: 100%;
+    }
+
+    .input-container input {
+        height: 50px;
+        padding: 14px 45px 14px 15px;
+        font-size: 14px;
+    }
+
+    .input-container label {
+        font-size: 13px;
+        right: 45px;
+    }
+
+    .input-container i {
+        right: 15px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-container {
+        padding: 10px;
+    }
+
+    .register-card {
+        padding: 20px 15px;
+    }
+
+    .input-container input {
+        height: 45px;
+        font-size: 14px;
+    }
+}
+
+.input-container input:invalid:not(:placeholder-shown) {
+    background: rgba(220, 38, 38, 0.1);
+}
+
+.input-container input:invalid:not(:placeholder-shown) ~ label {
+    color: #dc2626;
+}
+
+.input-container input:invalid:not(:placeholder-shown) ~ i {
+    color: #dc2626;
+}
+
+.input-container input::placeholder {
+    color: transparent;
+}
+
+.input-container input::-webkit-scrollbar {
+    width: 8px;
+}
+
+.input-container input::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.input-container input::-webkit-scrollbar-thumb {
+    background: #2563eb;
+    border-radius: 4px;
+}
+
+.price-summary {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #888;
+}
+
+.summary-item.total {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.original {
+    text-decoration: line-through;
+    color: #666;
+}
+
+.discount {
+    color: #dc2626;
+}
+
+.submit-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.submit-btn {
+    background: linear-gradient(45deg, #2563eb, #1d4ed8);
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    min-width: 200px;
+    justify-content: center;
+}
+
+.submit-btn i {
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+.submit-btn:hover i {
+    transform: translateX(-5px);
+}
+
+@media (max-width: 768px) {
+    .submit-btn {
+        padding: 14px 35px;
+        font-size: 16px;
+        min-width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .submit-button-container {
+        margin-top: 30px;
+    }
+
+    .submit-btn {
+        padding: 12px 30px;
+        font-size: 15px;
+        min-width: 160px;
+    }
+}
+
+.back-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-link a {
+    color: #888;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.back-link a:hover {
+    color: var(--primary-color);
+}
+
+/* تصميم قسم السعر الجديد */
+.pricing-box {
+    background: linear-gradient(145deg, rgba(37, 99, 235, 0.1), rgba(29, 78, 216, 0.05));
+    border-radius: 15px;
+    padding: 20px;
+    margin: 25px 0;
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.pricing-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.15);
+}
+
+.pricing-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #2563eb;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.pricing-header i {
+    font-size: 16px;
+}
+
+.pricing-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.original-price {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.original-price .label {
+    color: #888;
+    font-size: 13px;
+}
+
+.original-price .amount {
+    color: #888;
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+.discount-badge {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.savings {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #22c55e;
+    font-size: 13px;
+    padding: 8px;
+    background: rgba(34, 197, 94, 0.05);
+    border-radius: 12px;
+}
+
+.savings-icon {
+    width: 25px;
+    height: 25px;
+    background: rgba(34, 197, 94, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.final-price-box {
+    text-align: center;
+    padding: 15px;
+    background: rgba(37, 99, 235, 0.1);
+    border-radius: 12px;
+    margin-top: 8px;
+}
+
+.final-price-label {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.final-price-amount {
+    font-size: 26px;
+    font-weight: bold;
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+.final-price-amount .currency {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.price-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #dc2626;
+    font-size: 12px;
+}
+
+/* تحسين التجاوب */
+@media (max-width: 768px) {
+    .pricing-box {
+        padding: 15px;
+    }
+
+    .final-price-amount {
+        font-size: 24px;
+    }
+
+    .final-price-amount .currency {
+        font-size: 15px;
+    }
+} 
