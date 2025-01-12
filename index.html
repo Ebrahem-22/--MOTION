@@ -3,186 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>كورس السبورة البيضاء الاحترافي</title>
+    <title>كورس السبورة البيضاء</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/@clerk/clerk-js@latest/dist/clerk.browser.js"></script>
-    <script>
-        // التحقق من تحميل Clerk
-        window.addEventListener('load', async function() {
-            await window.Clerk.load();
-        });
-    </script>
 </head>
-<body class="dark-theme">
-    <div id="clerk-auth"></div>
+<body>
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="container nav-container">
             <div class="logo">
-                <img src="logo.png" alt="Logo">
+                <img src="https://i.ibb.co/HhJsd3D/Pica-enhance-20250112090842.png" alt="كورس السبورة البيضاء" class="logo-image">
             </div>
             <div class="nav-left">
-                <a href="register.html" class="nav-cta">
-                    سجل الآن
+                <a href="https://EbrahemGroupe.nzmly.com" class="nav-cta" target="_blank">
+                    تسجيل الدخول
                     <i class="fas fa-arrow-left"></i>
                 </a>
             </div>
         </div>
     </nav>
 
-    <header class="hero">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="main-title">تعلم فن السبورة البيضاء</h1>
-                <p class="main-subtitle">اتقن مهارات الشرح والتعليم البصري باحترافية</p>
-                
-                <div class="pricing-section">
-                    <div class="limited-offer">
-                        <i class="fas fa-bolt"></i>
-                        عرض محدود لفترة
-                    </div>
-                    <div class="price-content">
-                        <div class="original-price-tag">
-                            <span class="amount">900</span>
-                            <span class="currency">جنيه</span>
+            <div class="hero-wrapper">
+                <div class="hero-content">
+                    <div class="title-wrapper">
+                        <h1 class="main-title">تعلم فن السبورة البيضاء</h1>
+                        <div class="hero-price">
+                            <span class="old-price">900 جنيه</span>
+                            <span class="new-price">500 جنيه</span>
+                            <div class="discount-badge">خصم 44%</div>
                         </div>
-                        <div class="discount-info">
-                            <div class="save-badge">
-                                <i class="fas fa-gift"></i>
-                                وفر 400 جنيه
-                            </div>
-                            <div class="discount-badge">
-                                <i class="fas fa-percent"></i>
-                                خصم 44%
-                            </div>
-                        </div>
-                        <div class="final-price">
-                            <span class="amount">500</span>
-                            <span class="currency">جنيه</span>
+                        <div class="title-decoration">
+                            <span class="line"></span>
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span class="line"></span>
                         </div>
                     </div>
-                    <button onclick="window.location.href='register.html'" id="registerBtn" class="cta-button">
-                        احجز مكانك الآن
-                        <i class="fas fa-arrow-left"></i>
-                    </button>
+                    <p class="hero-subtitle">اكتشف أسرار التدريس الفعال وتقنيات الشرح المتميزة</p>
+                    <div class="hero-cta">
+                        <a href="https://EbrahemGroupe.nzmly.com" class="cta-button glow-effect" target="_blank">
+                            تسجيل الدخول
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
+        <div class="hero-background">
+            <div class="gradient-overlay"></div>
+            <div class="particles"></div>
+        </div>
+    </section>
 
-    <!-- قسم ماذا ستتعلم -->
-    <section class="skills">
+    <!-- Features Section -->
+    <section class="features">
         <div class="container">
-            <h2 class="section-title">ماذا ستتعلم في الكورس؟</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="fas fa-pencil-alt"></i>
-                    <h3>أساسيات الرسم</h3>
-                    <p>تعلم أساسيات الرسم والتخطيط على السبورة البيضاء بأسلوب احترافي</p>
+            <div class="section-header">
+                <h2>مميزات الكورس</h2>
+                <div class="header-line"></div>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>تدريب عملي</h3>
+                    <p>تطبيق مباشر للمهارات المكتسبة</p>
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-chalkboard-teacher"></i>
-                    <h3>تقنيات الشرح</h3>
-                    <p>اكتساب مهارات الشرح البصري وتبسيط المعلومات المعقدة</p>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>شهادة معتمدة</h3>
+                    <p>احصل على شهادة إتمام الكورس</p>
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-paint-brush"></i>
-                    <h3>الألوان والتنسيق</h3>
-                    <p>تعلم استخدام الألوان وتنسيق السبورة بشكل جذاب ومنظم</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-brain"></i>
-                    <h3>التفكير البصري</h3>
-                    <p>تطوير مهارات التفكير البصري وتحويل الأفكار إلى رسومات</p>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>دعم مستمر</h3>
+                    <p>مجتمع تعليمي داعم ومتفاعل</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- قسم آراء المشتركين -->
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <!-- محتوى قسم التسعير السابق -->
+    </section>
+
+    <!-- Testimonials Section -->
     <section class="testimonials">
         <div class="container">
-            <h2 class="section-title">آراء المشتركين</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="أحمد محمد">
-                    <p>"الكورس سير طريقة شرحي بالكامل، أصبحت قادراً على توصيل المعلومات بشكل أفضل"</p>
-                    <h4>أحمد محمد</h4>
-                    <span class="job-title">مدرس رياضيات</span>
+            <div class="section-header">
+                <h2 class="section-title">آراء المشتركين</h2>
+                <div class="title-decoration">
+                    <span class="line"></span>
+                    <i class="fas fa-star"></i>
+                    <span class="line"></span>
                 </div>
+            </div>
+
+            <div class="testimonials-slider">
                 <div class="testimonial-card">
-                    <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="سارة أحمد">
-                    <p>"تعلمت كيفية تنظيم أفكاري وعرضها بشكل مرئي جذاب على السبورة"</p>
-                    <h4>سارة أحمد</h4>
-                    <span class="job-title">معلمة علوم</span>
+                    <div class="testimonial-image">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="المشترك">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "كورس رائع جداً، استفدت منه كثيراً في تطوير مهاراتي في الشرح والتدريس. أنصح به بشدة!"
+                        </p>
+                        <div class="testimonial-author">
+                            <h4>أحمد محمد</h4>
+                            <span>مدرس رياضيات</span>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="testimonial-card">
-                    <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="محمد علي">
-                    <p>"أصبحت محاضراتي أكثر تفاعلية وجاذبية بفضل تقنيات السبورة البيضاء"</p>
-                    <h4>محمد علي</h4>
-                    <span class="job-title">محاضر جامعي</span>
+                    <div class="testimonial-image">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="المشتركة">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "محتوى الكورس منظم وشامل، والشرح واضح وسلس. تعلمت تقنيات جديدة ساعدتني في عملي."
+                        </p>
+                        <div class="testimonial-author">
+                            <h4>سارة أحمد</h4>
+                            <span>معلمة علوم</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="المشترك">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "الكورس غير طريقة تدريسي بالكامل. أصبحت دروسي أكثر تفاعلية وممتعة للطلاب."
+                        </p>
+                        <div class="testimonial-author">
+                            <h4>محمد علي</h4>
+                            <span>مدرس لغة عربية</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- النافذة المنبثقة -->
-    <div id="registerModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <div class="modal-header">
-                <i class="fas fa-paper-plane modal-icon"></i>
-                <h2>جاري تحويلك لصفحة التسجيل</h2>
-                <p>انتظر قليلاً...</p>
-            </div>
-            <div class="countdown-wrapper">
-                <div class="countdown-circle">
-                    <span id="countdown">5</span>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://i.ibb.co/HhJsd3D/Pica-enhance-20250112090842.png" alt="كورس السبورة البيضاء" class="footer-logo-image">
                 </div>
-                <div class="loading-bar">
-                    <div class="progress"></div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
+            <div class="footer-copyright">
+                جميع الحقوق محفوظة © 2024
+            </div>
         </div>
-    </div>
+    </footer>
 
-    <!-- إضافة modal خاص بـ Clerk -->
-    <div id="clerk-modal" class="clerk-modal">
-        <div class="clerk-modal-content">
-            <div id="clerk-auth-container"></div>
-        </div>
-    </div>
-
-    <!-- إضافة زر Chatbot -->
+    <!-- Chat Widget -->
     <div class="chat-widget">
-        <button id="chatToggle" class="chat-toggle">
-            <i class="fas fa-comments"></i>
-        </button>
-        
-        <div id="chatbox" class="chatbox hidden">
-            <div class="chat-header">
-                <h3>المساعد الذكي</h3>
-                <button id="closeChat" class="close-chat">
-                    <i class="fas fa-times"></i>
-                </button>
+        <!-- محتوى Chat Widget السابق -->
+    </div>
+
+    <!-- إضافة شاشة الانتقال -->
+    <div class="transition-screen">
+        <div class="transition-content">
+            <div class="loading-animation">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
             </div>
-            
-            <div id="chatMessages" class="chat-messages">
-                <div class="message bot">
-                    مرحباً! كيف يمكنني مساعدتك؟
-                </div>
-            </div>
-            
-            <div class="chat-input">
-                <input type="text" id="userInput" placeholder="اكتب سؤالك هنا...">
-                <button id="sendMessage">
-                    <i class="fas fa-paper-plane"></i>
-                </button>
-            </div>
+            <h2 class="transition-text">جاري تحويلك إلى صفحة التسجيل</h2>
+            <p class="transition-subtext">انتظر لحظات من فضلك...</p>
         </div>
     </div>
 
-    <script src="script.js"></script>
-    <script src="chatbot.js"></script>
+    <div class="whatsapp-button">
+        <a href="https://wa.me/+201065509487" target="_blank" class="whatsapp-link">
+            <i class="fab fa-whatsapp"></i>
+            <span class="tooltip">تواصل معنا عبر واتساب</span>
+        </a>
+    </div>
 </body>
 </html> 
